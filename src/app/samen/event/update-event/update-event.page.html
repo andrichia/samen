@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Update Event</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="onCloseEvent()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row>
+    <ion-col>
+      <ion-item>
+        <ion-input placeholder="id_event" [(ngModel)]="id_event"></ion-input>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-item>
+        <ion-input placeholder="nama_kegiatan" [(ngModel)]="nama_kegiatan"></ion-input>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-item>
+        <ion-input placeholder="start date" [(ngModel)]="start_date"></ion-input>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-item>
+        <ion-input placeholder="end date" [(ngModel)]="end_date"></ion-input>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-button (click)="updateEvent(id_event, nama_kegiatan, start_date, end_date)">Update</ion-button>
+    </ion-col>
+  </ion-row>
+</ion-content>

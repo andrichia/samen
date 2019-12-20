@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>SAMEN</ion-title>
+    <ion-buttons slot="primary">
+      <ion-button (click)="alert()">
+        <ion-icon name="contact"></ion-icon>
+        {{nama}}
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="onViewProfil()">
+        <ion-icon name="home"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-item [routerLink]="['/', 'samen', 'ronda']">
+          <ion-label>Ronda</ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item [routerLink]="['/', 'samen', 'event']">
+          <ion-label>Event</ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item [routerLink]="['/', 'samen', 'lapor']">
+          <ion-label>Lapor</ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item [routerLink]="['/', 'samen', 'inventaris']">
+          <ion-label>Inventaris</ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

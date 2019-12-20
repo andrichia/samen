@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Register</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="closeModal()">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+  <ion-row>
+    <ion-item>
+      <ion-input placeholder="masukkan no ktp" [(ngModel)]="ktp" style="text-align: center;">KTP   :</ion-input>
+    </ion-item>
+  </ion-row>
+  <ion-row>
+      <ion-item>
+        <ion-input placeholder="masukkan email" [(ngModel)]="email" style="text-align: center;">Email   :</ion-input>
+      </ion-item>
+    </ion-row>
+    <ion-row>
+      <ion-item>
+        <ion-input placeholder="masukkan nama" [(ngModel)]="nama" style="text-align: center;">nama  :</ion-input>
+      </ion-item>
+    </ion-row>
+    <ion-row>
+      <ion-item>
+        <ion-input type="password" placeholder="masukkan password" [(ngModel)]="password" style="text-align: center;">password  :</ion-input>
+      </ion-item>
+    </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-button (click)="register()">Register</ion-button>
+    </ion-col>
+  </ion-row>
+
+</ion-content>

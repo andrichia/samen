@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>SAMEN > Lapor</ion-title>
+    <ion-buttons slot="primary">
+      <ion-button (click)="goBack()">
+        <ion-icon name="arrow-round-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="primary">
+      <ion-button (click)="addLapor()">
+        <ion-icon name="add"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="UpdateRecord()">
+        <ion-icon name="create"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let item of lapor">
+    <span *ngIf="!item.isEdit; else elseBlock">
+      <ion-card-header>
+      <ion-card-title>{{item.lapor_img}}</ion-card-title>
+      <ion-card-subtitle>ket : {{item.keterangan}}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>tgl kejadian : {{ item.lapor_date }}</ion-item>
+      <ion-item>pelapor : {{ item.nama_lapor }}</ion-item>
+      <ion-button shape="round" color="secondary" size="small" (click)="UpdateRecord(recordRow)">
+        <ion-icon size="small" slot="icon-only" name="create"></ion-icon>
+      </ion-button>
+      <ion-button shape="round" color="danger" size="small" (click)="DeleteRecord(rowID)">
+        <ion-icon size="small" slot="icon-only" name="trash"></ion-icon>
+
+      </ion-button>
+    </ion-card-content>
+    </span>
+    
+  </ion-card>
+</ion-content>

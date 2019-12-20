@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>SAMEN > Lapor > Buat Laporan</ion-title>
+    
+    
+    
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-grid>
+    <ion-col>
+      <ion-row>
+        <ion-img
+          role="button"
+          class="image"
+          (click)="onPickImage()"
+          [src]="selectedImage"
+          *ngIf="selectedImage"
+          [(ngModel)]="lapor_img"
+        ></ion-img>
+      </ion-row>
+      <ion-row>
+        <input type='file' (change)="onFileChosen($event)"/>
+      </ion-row>
+      <ion-row>
+        <ion-input placeholder="Deskripsi" [(ngModel)]="keterangan"></ion-input>
+      </ion-row>
+      <ion-row>
+        <ion-input placeholder="tanggal" [(ngModel)]="lapor_date"></ion-input>
+      </ion-row>
+      <ion-row>
+        <ion-input placeholder="pelapor" [(ngModel)]="nama_lapor"></ion-input>
+      </ion-row>
+
+      <ion-row>
+        <ion-button (click)="CreateRecord()">
+          LAPORKEUN !!1!
+        </ion-button>
+      </ion-row>
+    </ion-col>
+  </ion-grid>
+  
+  
+</ion-content>

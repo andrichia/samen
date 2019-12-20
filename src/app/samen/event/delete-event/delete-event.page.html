@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Delete Event</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="onCloseEvent()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row>
+    <ion-col>
+      <ion-item>
+        <ion-input placeholder="nama_kegiatan" [(ngModel)]="nama_kegiatan"></ion-input>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-button (click)="cekEvent(nama_kegiatan)">Delete</ion-button>
+    </ion-col>
+  </ion-row>
+</ion-content>

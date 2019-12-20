@@ -1,0 +1,8 @@
+{
+  "name": "SAMEN",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

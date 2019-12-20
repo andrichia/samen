@@ -1,0 +1,70 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>SAMEN > Ronda {{viewTitle}}</ion-title>
+    <ion-buttons slot="primary">
+      <ion-button (click)="goBack()">
+        <ion-icon name="arrow-round-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="primary">
+      <ion-button (click)="onAddRonda()" id="wew">
+        <ion-icon name="add"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="primary">
+      <ion-button (click)="onUpdateRonda()" id="waw">
+        <ion-icon name="create"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="onDeleteRonda()" id="wow">
+        <ion-icon name="trash"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- <ion-row>
+    <ion-col>
+      <ion-item>
+        <ion-input placeholder="idronda" [(ngModel)]="idronda"></ion-input>
+      </ion-item>
+    </ion-col>
+    <ion-col>
+        <ion-item>
+          <ion-input placeholder="nama" [(ngModel)]="nama"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+          <ion-item>
+            <ion-input placeholder="date" [(ngModel)]="ronda_date"></ion-input>
+          </ion-item>
+        </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-button (click)="addRonda()">Tambah</ion-button>
+    </ion-col>
+    <ion-col>
+      <ion-button (click)="cekRonda(nama)">Hapus</ion-button>
+    </ion-col>
+    <ion-col>
+      <ion-button (click)="updateRonda(idronda, nama, ronda_date)">Update</ion-button>
+    </ion-col>
+  </ion-row> -->
+  <ion-grid>
+    <calendar
+      [eventSource]="eventSource"
+      [calendarMode]="calendar.mode"
+      [currentDate]="calendar.currentDate"
+      (onTimeSelected)="onTimeSelected($event)"
+      (onTitleChanged)="onViewTitleChanged($event)"
+      (onEventSelected)="onEventSelected($event)"
+      startHour="6"
+      endHour="20"
+      step="30"
+      startingDayWeek="1">
+    </calendar>
+  </ion-grid>
+</ion-content>
