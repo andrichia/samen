@@ -19,7 +19,7 @@ export class LaporPage implements OnInit {
   lapor_img: string;
   keterangan: string;
   lapor_date: string;
-  id_lapor: string;
+  status: string;
   nama_lapor: string;
   lapor: any;
   laporAdd: LaporPage;
@@ -70,21 +70,26 @@ export class LaporPage implements OnInit {
 
   }
   
-  DeleteRecord(rowID){
-    this.crudService.delete_pickImg(rowID);
+  DeleteRecord(row_id){
+    this.crudService.delete_pickImg(row_id);
     
   }
   UpdateRecord(recordRow){
     let record = {};
-    record['Image'] = recordRow.EditImg;
-    record['Description'] = recordRow.EditDesc;
-    record['Date'] = recordRow.EditDate;
-    //record['Id'] = recordRow.EditId;
-    record['Name'] = recordRow.EditName;
+    
+    record['status'] = recordRow.EditStatus;
     this.crudService.update_pickImg(recordRow.id,record);
     recordRow.isEdit = false;
+  }
+  EditRecord(record) {
+    record.isEdit = true;
+    record.EditStatus = record.status;
   }
   goBack(){
     this.navCtrl.navigateBack('/samen')
   }
+  
+  
+  
+
 }
